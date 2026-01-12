@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato • Portfólio</title>
+  <meta name="description" content="Contato do Heitor Faria Balthazar." />
+
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, Arial, sans-serif; background: #0b0c10; color: #e9eef5; }
+    a { color: #2a63ff; text-decoration: none; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px; }
+    .top {
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; flex-wrap:wrap; margin-bottom:16px;
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:999px;
+      background:#141824;border:1px solid #242b3d;
+      color:#e9eef5;font-weight:600;transition:.15s;
+    }
+    .pill:hover{border-color:#3b4766;transform:translateY(-1px);}
+    .card{
+      background:#141824;border:1px solid #242b3d;border-radius:16px;
+      padding:20px; line-height:1.55;
+    }
+    h1{margin:0;font-size:26px;}
+    h2{margin:18px 0 10px 0;font-size:18px;}
+    p{margin:10px 0;opacity:.92;}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width: 720px){
+      .grid{grid-template-columns:1fr;}
+    }
+    .box{
+      background:#101420;
+      border:1px solid #242b3d;
+      border-radius:14px;
+      padding:16px;
+    }
+    .muted{opacity:.7;font-size:14px;}
+    .btn{
+      display:inline-block;padding:10px 12px;border-radius:10px;
+      background:#2a63ff;color:#fff;font-weight:700;text-decoration:none;
+    }
+    .btn:hover{filter:brightness(1.05);}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+    .line{height:1px;background:#242b3d;margin:16px 0;}
+    label{display:block;font-weight:600;margin-top:10px;margin-bottom:6px;}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:10px;
+      border:1px solid #242b3d;
+      background:#0e1220;
+      color:#e9eef5;
+      outline:none;
+      font-size:14px;
+    }
+    textarea{min-height:120px;resize:vertical;}
+    .hint{margin-top:8px;opacity:.75;font-size:13px;}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <h1>✉️ Contato</h1>
+      <a class="pill" href="./index.html">⬅️ Voltar</a>
+    </div>
+
+    <div class="card">
+      <p>
+        Quer falar comigo sobre estágio, freelance ou projetos em Flutter/jogos?
+        Me chama por um dos canais abaixo.
+      </p>
+
+      <div class="grid">
+        <div class="box">
+          <h2>📩 E-mail</h2>
+          <p><a href="mailto:heitor.fbalthazar@gmail.com">heitor.fbalthazar@gmail.com</a></p>
+          <a class="btn" href="mailto:heitor.fbalthazar@gmail.com?subject=Contato%20-%20Portf%C3%B3lio%20de%20Jogos">Enviar e-mail</a>
+          <p class="hint">Dica: coloque um assunto e diga rapidamente o que você precisa.</p>
+        </div>
+
+        <div class="box">
+          <h2>📱 WhatsApp</h2>
+          <p><a href="tel:+5511992924344">+55 (11) 99292-4344</a></p>
+          <a class="btn" target="_blank" rel="noreferrer"
+             href="https://wa.me/5511992924344?text=Ol%C3%A1%20Heitor!%20Vi%20seu%20portf%C3%B3lio%20de%20jogos%20e%20gostaria%20de%20conversar.">
+            Abrir WhatsApp
+          </a>
+          <p class="hint">Ideal para conversa rápida e alinhamento inicial.</p>
+        </div>
+
+        <div class="box">
+          <h2>💻 GitHub</h2>
+          <p><a target="_blank" rel="noreferrer" href="https://github.com/heitorBalthaz">github.com/heitorBalthaz</a></p>
+          <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/heitorBalthaz">Ver GitHub</a>
+          <p class="hint">Repositórios, projetos e código.</p>
+        </div>
+
+        <div class="box">
+          <h2>🔗 LinkedIn</h2>
+          <p><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/heitor-balthazar-846014321/">Perfil no LinkedIn</a></p>
+          <a class="btn" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/heitor-balthazar-846014321/">Abrir LinkedIn</a>
+          <p class="hint">Conexões, networking e oportunidades.</p>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <h2>📝 Mensagem rápida (sem backend)</h2>
+      <p class="muted">
+        Este formulário usa <strong>mailto:</strong> (abre seu app de e-mail).
+        Em hospedagem estática (GitHub Pages), isso é o mais simples sem servidor.
+      </p>
+
+      <form action="mailto:heitor.fbalthazar@gmail.com" method="post" enctype="text/plain">
+        <label for="nome">Seu nome</label>
+        <input id="nome" name="Nome" placeholder="Ex: João Silva" />
+
+        <label for="email">Seu e-mail</label>
+        <input id="email" name="Email" placeholder="Ex: joao@email.com" />
+
+        <label for="msg">Mensagem</label>
+        <textarea id="msg" name="Mensagem" placeholder="Ex: Vi seu portfólio e quero conversar sobre..."></textarea>
+
+        <div class="row">
+          <button class="btn" type="submit" style="border:none;cursor:pointer;">Enviar</button>
+          <a class="pill" href="./sobre.html">👤 Sobre mim</a>
+        </div>
+
+        <p class="hint">
+          Se o botão não abrir o e-mail, use os botões de E-mail/WhatsApp acima.
+        </p>
+      </form>
+
+      <p class="muted" style="margin-top:18px;">
+        📍 Santana de Parnaíba – SP • Disponível para trabalho remoto
+      </p>
+    </div>
+  </div>
+</body>
+</html>

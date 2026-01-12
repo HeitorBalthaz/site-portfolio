@@ -15,36 +15,30 @@
     .title h1 { margin: 0; font-size: 28px; }
     .title p { margin: 8px 0 0 0; opacity: .82; line-height: 1.4; }
     .actions { display: flex; gap: 10px; flex-wrap: wrap; }
-    .pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 12px; border-radius: 999px;
-      background: #141824; border: 1px solid #242b3d;
-      text-decoration: none; font-weight: 600;
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:999px;
+      background:#141824;border:1px solid #242b3d;
+      text-decoration:none;font-weight:600;
+      transition:.15s;
     }
-    .pill:hover { border-color: #3b4766; transform: translateY(-1px); }
+    .pill:hover{border-color:#3b4766;transform:translateY(-1px);}
     main { margin-top: 18px; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
-
-    /* Card agora é DIV, não mais <a> */
-    .card {
-      background: #141824; border: 1px solid #242b3d; border-radius: 16px;
-      padding: 16px; transition: .15s;
-      min-height: 140px;
+    .card{
+      background:#141824;border:1px solid #242b3d;border-radius:16px;
+      padding:16px;transition:.15s;min-height:140px;
     }
-    .card:hover { border-color: #3b4766; transform: translateY(-2px); }
-    .card h2 { margin: 0 0 8px 0; font-size: 18px; }
-    .card p { margin: 0 0 14px 0; opacity: .85; line-height: 1.35; }
-
-    /* Botão Jogar é o link direto */
-    .btn {
-      display: inline-block; padding: 10px 12px; border-radius: 10px;
-      background: #2a63ff; color: #fff; font-weight: 700;
-      text-decoration: none;
+    .card:hover{border-color:#3b4766;transform:translateY(-2px);}
+    .card h2{margin:0 0 8px 0;font-size:18px;}
+    .card p{margin:0 0 14px 0;opacity:.85;line-height:1.35;}
+    .btn{
+      display:inline-block;padding:10px 12px;border-radius:10px;
+      background:#2a63ff;color:#fff;font-weight:700;text-decoration:none;
     }
-    .btn:hover { filter: brightness(1.05); }
-
-    .meta { margin-top: 10px; font-size: 12px; opacity: .7; }
-    footer { margin-top: 26px; opacity: .7; font-size: 13px; }
+    .btn:hover{filter:brightness(1.05);}
+    .meta{margin-top:10px;font-size:12px;opacity:.7;}
+    footer{margin-top:26px;opacity:.7;font-size:13px;}
   </style>
 </head>
 
@@ -57,16 +51,14 @@
       </div>
 
       <div class="actions">
-        <!-- Troque pelos seus links se quiser -->
-        <a class="pill" href="#" onclick="alert('Coloque aqui seu link do GitHub/LinkedIn!'); return false;">👤 Sobre</a>
-        <a class="pill" href="#" onclick="alert('Coloque aqui seu contato!'); return false;">✉️ Contato</a>
+        <a class="pill" href="./sobre.html">👤 Sobre mim</a>
+        <a class="pill" href="./contato.html">✉️ Contato</a>
       </div>
     </header>
 
     <main>
       <section class="grid">
 
-        <!-- JOGO 1 (botão Jogar é link direto) -->
         <div class="card">
           <h2>Block Blast Infinity</h2>
           <p>Quebre blocos, faça combos e tente bater seu recorde.</p>
@@ -80,16 +72,6 @@
 
           <div class="meta">Plataforma: Web • Flutter</div>
         </div>
-
-        <!-- EXEMPLO: adicione mais jogos copiando este bloco -->
-        <!--
-        <div class="card">
-          <h2>Color Sort Puzzle</h2>
-          <p>Organize as cores e resolva os níveis.</p>
-          <a class="btn" href="./games/color-sort/" target="_blank" rel="noreferrer">Jogar</a>
-          <div class="meta">Plataforma: Web • Flutter</div>
-        </div>
-        -->
 
       </section>
 
